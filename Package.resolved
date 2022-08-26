@@ -8,6 +8,33 @@
         "revision" : "d273b5b7025d386feef79ef6bad7de762e106eaf",
         "version" : "4.2.0"
       }
+    },
+    {
+      "identity" : "releases",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/JohnSundell/Releases.git",
+      "state" : {
+        "revision" : "566ef26cf2f5bb5280ff565761682af91b9398db",
+        "version" : "5.0.0"
+      }
+    },
+    {
+      "identity" : "require",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/JohnSundell/Require.git",
+      "state" : {
+        "revision" : "7cfbd0d8a2dede0e01f6f0d8ab2c7acef1df112e",
+        "version" : "2.0.1"
+      }
+    },
+    {
+      "identity" : "shellout",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/JohnSundell/ShellOut.git",
+      "state" : {
+        "revision" : "e1577acf2b6e90086d01a6d5e2b8efdaae033568",
+        "version" : "2.3.0"
+      }
     }
   ],
   "version" : 2

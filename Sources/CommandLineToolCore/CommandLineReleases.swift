@@ -1,7 +1,14 @@
-import Foundation
-import Files
+//
+//  File.swift
+//  
+//
+//  Created by admin on 2022/8/26.
+//
 
-public final class CommandLineTool {
+import Foundation
+import Releases
+
+public final class CommandLineReleases {
     private let arguments: [String]
     
     public init(arguments: [String] = CommandLine.arguments) {
@@ -16,21 +23,18 @@ public final class CommandLineTool {
         
         let fileName = arguments[1]
         
-        do {
-            try Folder.current.createFile(at: fileName)
-            
-            print(fileName)
-        } catch {
-            throw Error.failedToCreateFile
-        }
-        
-//        print("Hello world")
+        let url = URL(string: fileName)! //"https://github.com/johnsundell/unbox"
+        let releases = try? Releases.versions(for: url)
+        // Print the latest version
+        print(releases as Any)
+    
     }
 }
 
-public extension CommandLineTool {
+public extension CommandLineReleases {
     enum Error: Swift.Error {
         case missingFileName
         case failedToCreateFile
     }
 }
+

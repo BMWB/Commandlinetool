@@ -1,6 +1,6 @@
 import CommandLineToolCore
 
-let tool = CommandLineTool()
+let tool = CommandLineReleases()
 
 do {
     try tool.run()
