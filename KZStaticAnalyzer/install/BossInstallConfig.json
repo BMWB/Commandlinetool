@@ -1,0 +1,82 @@
+[
+    {   
+        "name" : "bossproject",
+        "defaultReviewers" : "yangmaosheng,zhenglibao",
+        "defaultSubscriber" : ""
+    },
+    {
+        "name" : "bz_models",
+        "defaultReviewers" : "yangmaosheng,zhenglibao",
+        "defaultSubscriber" : ""
+    },
+    {
+        "name" : "bz_basic",
+        "defaultReviewers" : "yangmaosheng,zhenglibao",
+        "defaultSubscriber" : ""
+    },
+    {
+        "name" : "bz_user",
+        "defaultReviewers" : "yangmaosheng,zhenglibao",
+        "defaultSubscriber" : ""
+    },
+    {
+        "name" : "bz_network",
+        "defaultReviewers" : "yangmaosheng,zhenglibao",
+        "defaultSubscriber" : ""
+    },
+    {
+        "name" : "bz_chat",
+        "defaultReviewers" : "weizhaohui",
+        "defaultSubscriber" : ""
+    },
+    {
+        "name" :  "bz_chatbase",
+        "defaultReviewers" : "zhenglibao,weizhaohui",
+        "defaultSubscriber" : ""
+    },
+    {
+        "name" : "bz_geek",
+        "defaultReviewers" : "weizhaohui",
+        "defaultSubscriber" : ""
+    },
+    {
+        "name" : "bz_boss",
+        "defaultReviewers" : "zhoupengzu",
+        "defaultSubscriber" : ""
+    },
+    {
+        "name" : "bz_company",
+        "defaultReviewers" : "douchaolong",
+        "defaultSubscriber" : ""
+    },
+    {
+        "name" : "bz_setting",
+        "defaultReviewers" : "douchaolong",
+        "defaultSubscriber" : ""
+    },
+    {
+        "name" : "bz_support",
+        "defaultReviewers" : "douchaolong",
+        "defaultSubscriber" : ""
+    },
+    {
+        "name" : "bz_login",
+        "defaultReviewers" : "zhaoguoteng",
+        "defaultSubscriber" : ""
+    },
+    { 
+        "name" : "bz_homepage",
+        "defaultReviewers" : "zhaoguoteng",
+        "defaultSubscriber" : ""
+    },
+    {
+        "name" : "bz_optionalpart",
+        "defaultReviewers" : "liuyaping,yangmaosheng",
+        "defaultSubscriber" : ""
+    },
+    { 
+        "name" : "bz_thirdpart",
+        "defaultReviewers" : "yangmaosheng,zhenglibao",
+        "defaultSubscriber" : ""
+    }
+]

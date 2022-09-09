@@ -20,19 +20,24 @@ let package = Package(
         ),
         .package(url: "https://github.com/JohnSundell/Releases.git", from: "5.0.0"),
         .package(url: "https://github.com/JohnSundell/ShellOut.git", from: "2.0.0"),
-        .package(url: "https://github.com/JohnSundell/Require.git", from: "2.0.0")
+        .package(url: "https://github.com/JohnSundell/Require.git", from: "2.0.0"),
+        .package(url: "https://github.com/fastlane/fastlane.git", from: "2.209.1")
+//        .package(url: "https://github.com/Alamofire/Alamofire.git",
+//                         from: "5.6.2")
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .executableTarget(
             name: "CommandLineTool",
-            dependencies: ["CommandLineToolCore"]),
+            dependencies: ["CommandLineToolCore","SwiftIpaTool"]),
+        .target(name: "SwiftIpaTool"),
         .target(name: "CommandLineToolCore",
                 dependencies: [.product(name: "Files", package: "files"),
                                "Releases",
                                "ShellOut",
-                               "Require"]),
+                               "Require",
+                               "Fastlane"]),
         .testTarget(
             name: "CommandLineToolTests",
             dependencies: ["CommandLineTool","CommandLineToolCore",.product(name: "Files", package: "files")]),

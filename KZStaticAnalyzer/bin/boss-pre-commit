@@ -1,0 +1,32 @@
+#!/usr/bin/env python3
+#_*_ coding: utf-8 _*_
+
+import sys, os
+import subprocess
+
+CHECK_ERROR_CODE = 66
+
+#main 
+print("\n############## Code quality analyze start ##############")
+currentFileDirPath = os.path.dirname(os.path.abspath(__file__))
+projectPath = currentFileDirPath.replace('/.git/hooks', '')
+mainDirPath = os.path.dirname(projectPath)
+formatDiffLibPath = os.path.join(mainDirPath, 'bossproject/.PythonLib/KZStaticAnalyzer/IncrementQualityControl.py')
+commitValid = True 
+if os.path.exists(formatDiffLibPath):
+    cmd = formatDiffLibPath + ' -m ' + mainDirPath + ' -p ' + projectPath + ' -d Pods'
+    err,out = subprocess.getstatusoutput(cmd)
+    if err == CHECK_ERROR_CODE:
+        commitValid = False
+        print(out)
+    elif err:
+        print('Analyze faild with error: %s, %s' % (err, out))
+    else:
+        print(out)
+else:
+    print('Error occurred because `IncrementQualityControl.py` file could not be found!')
+print("############## Code quality analyze end ##############\n")
+
+if not commitValid:
+    sys.exit(CHECK_ERROR_CODE)
+
